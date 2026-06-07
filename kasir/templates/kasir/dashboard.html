@@ -1,0 +1,221 @@
+{% extends 'kasir/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="mb-4">
+
+    <h1 class="fw-bold">
+        🛒 HalalMart Pro
+    </h1>
+
+    <p class="text-muted">
+        Sistem Kasir & Analitik UMKM Muslim
+    </p>
+
+</div>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+
+                    <h5>Jumlah Produk</h5>
+
+                    <h2>
+                        {{ jumlah_produk }}
+                    </h2>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+
+                    <h5>Total Stok</h5>
+
+                    <h2>
+                        {{ total_stok }}
+                    </h2>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+
+                    <h5>Nilai Inventaris</h5>
+
+                    <h2>
+                        Rp {{ total_nilai }}
+                    </h2>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mt-3">
+    <div class="card">
+        <div class="card-body">
+
+            <h5>Jumlah Transaksi</h5>
+
+            <h2>
+                {{ jumlah_transaksi }}
+            </h2>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 mt-3">
+    <div class="card">
+        <div class="card-body">
+
+            <h5>Total Omzet</h5>
+
+            <h2>
+                Rp {{ total_omzet }}
+            </h2>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4 mt-3">
+    <div class="card">
+        <div class="card-body">
+
+            <h5>💵 Kurs USD ke IDR</h5>
+
+            <h2>
+                Rp {{ kurs_usd }}
+            </h2>
+
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <hr>
+
+<div class="card mt-4">
+
+    <div class="card-body">
+
+        <h3 class="text-dark">
+            📈 Grafik Omzet
+        </h3>
+
+        <canvas id="omzetChart"></canvas>
+        
+
+<script>
+const ctx = document.getElementById('omzetChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Omzet'],
+        datasets: [{
+            label: 'Total Omzet',
+            data: [Number('{{ total_omzet }}')],
+            borderWidth: 1
+        }]
+    }
+});
+</script>
+
+    </div>
+
+</div>
+    <br>
+
+    <hr>
+
+<div class="card mt-4">
+
+    <div class="card-body">
+
+        <h3 class="text-dark">
+            ⚠ Produk Hampir Habis
+        </h3>
+
+        <ul class="list-group">
+
+        {% for produk in produk_hampir_habis %}
+
+            <li class="list-group-item">
+
+                {{ produk.nama }}
+                (Stok: {{ produk.stok }})
+
+            </li>
+
+        {% empty %}
+
+            <li class="list-group-item">
+
+                ✅ Semua stok aman
+
+            </li>
+
+        {% endfor %}
+
+        </ul>
+
+    </div>
+
+</div>
+
+    <div class="mt-4">
+
+    <a href="/produk/" class="btn btn-primary btn-lg">
+        📦 Produk
+    </a>
+
+    <a href="/jual/" class="btn btn-success btn-lg">
+        💰 Jual
+    </a>
+
+    <a href="/transaksi/" class="btn btn-secondary btn-lg">
+        📋 Transaksi
+    </a>
+
+    <a href="/laporan/" class="btn btn-warning btn-lg">
+        📑 Laporan
+    </a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+if (!sessionStorage.getItem("popupSudahMuncul")) {
+
+    const sekarang = new Date();
+
+    alert(
+        "🕒 Selamat Datang di HalalMart Pro\n\n" +
+        sekarang.toLocaleString()
+    );
+
+    sessionStorage.setItem(
+        "popupSudahMuncul",
+        "ya"
+    );
+}
+
+</script>
+
+{% endblock %}

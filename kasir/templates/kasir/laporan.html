@@ -1,0 +1,38 @@
+{% extends 'kasir/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1>📑 Laporan Keuangan</h1>
+
+    <div class="card mt-4">
+        <div class="card-body">
+
+            <h4>
+                Jumlah Transaksi:
+                {{ jumlah_transaksi }}
+            </h4>
+
+            <h4>
+                Total Produk Terjual:
+                {{ total_produk_terjual }}
+            </h4>
+
+            <h4>
+                Total Omzet:
+                Rp {{ total_omzet }}
+            </h4>
+
+        </div>
+    </div>
+
+    <br>
+
+    <a href="/" class="btn btn-primary">
+        Dashboard
+    </a>
+
+</div>
+
+{% endblock %}
