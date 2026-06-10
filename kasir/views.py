@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Produk, Transaksi
 from django.db.models import Sum
-from .forms import TransaksiForm
+from .forms import TransaksiForm, ProdukForm
+from .forms import ProdukForm
 
 import requests
 
@@ -154,5 +155,35 @@ def laporan_keuangan(request):
             'jumlah_transaksi': jumlah_transaksi,
             'total_omzet': total_omzet,
             'total_produk_terjual': total_produk_terjual,
+        }
+    )
+
+def reset_stok(request):
+
+    Produk.objects.all().update(stok=100)
+
+    return redirect('dashboard')
+
+def tambah_produk(request):
+
+    if request.method == 'POST':
+
+        form = ProdukForm(request.POST)
+
+        if form.is_valid():
+
+            form.save()
+
+            return redirect('produk')
+
+    else:
+
+        form = ProdukForm()
+
+    return render(
+        request,
+        'kasir/tambah_produk.html',
+        {
+            'form': form
         }
     )

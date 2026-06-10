@@ -1,33 +1,38 @@
 {% extends 'kasir/base.html' %}
+{% load i18n %}
 
 {% block content %}
 
-<div class="container mt-5">
+<h2>
+    🛍 {% trans "Buat Pemesanan" %}
+</h2>
 
-    <h1>🛒 Transaksi Penjualan</h1>
+<div class="alert alert-info">
 
-    <form method="post">
+    <h4>
+        {% trans "Selamat Datang di HalalMart Pro" %}
+    </h4>
 
-        {% csrf_token %}
-
-        {{ form.as_p }}
-
-        <button
-            type="submit"
-            class="btn btn-success">
-
-            Simpan Transaksi
-
-        </button>
-
-    </form>
-
-    <br>
-
-    <a href="/" class="btn btn-secondary">
-        Kembali ke Dashboard
-    </a>
+    <p>
+        {% trans "Pilih produk halal yang ingin Anda pesan." %}
+    </p>
 
 </div>
+
+<form method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button
+        type="submit"
+        class="btn btn-success">
+
+        {% trans "Buat Pesanan" %}
+
+    </button>
+
+</form>
 
 {% endblock %}

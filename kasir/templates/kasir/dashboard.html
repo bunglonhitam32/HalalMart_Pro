@@ -1,4 +1,5 @@
 {% extends 'kasir/base.html' %}
+{% load i18n %}
 
 {% block content %}
 
@@ -6,13 +7,21 @@
 
     <div class="mb-4">
 
-    <h1 class="fw-bold">
-        🛒 HalalMart Pro
-    </h1>
+    {% load static %}
 
-    <p class="text-muted">
-        Sistem Kasir & Analitik UMKM Muslim
-    </p>
+<div class="mb-4">
+
+    <img
+        src="{% static 'images/HalalMart Pro.png' %}"
+        alt="HalalMart Pro"
+        style="
+            max-width:400px;
+            width:100%;
+            height: auto;
+        "
+    >
+
+</div>
 
 </div>
 
@@ -22,7 +31,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h5>Jumlah Produk</h5>
+                    <h5>{% trans "Jumlah Produk" %}</h5>
 
                     <h2>
                         {{ jumlah_produk }}
@@ -36,7 +45,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h5>Total Stok</h5>
+                    <h5>{% trans "Total Stok" %}</h5>
 
                     <h2>
                         {{ total_stok }}
@@ -50,7 +59,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h5>Nilai Inventaris</h5>
+                    <h5>{% trans "Nilai Inventaris" %}</h5>
 
                     <h2>
                         Rp {{ total_nilai }}
@@ -64,7 +73,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h5>Jumlah Transaksi</h5>
+            <h5>{% trans "Jumlah Transaksi" %}</h5>
 
             <h2>
                 {{ jumlah_transaksi }}
@@ -78,7 +87,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h5>Total Omzet</h5>
+            <h5>{% trans "Total Omzet" %}</h5>
 
             <h2>
                 Rp {{ total_omzet }}
@@ -92,7 +101,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h5>💵 Kurs USD ke IDR</h5>
+            <h5>{% trans "Kurs USD ke IDR" %}</h5>
 
             <h2>
                 Rp {{ kurs_usd }}
@@ -111,7 +120,7 @@
     <div class="card-body">
 
         <h3 class="text-dark">
-            📈 Grafik Omzet
+            📈 {% trans "Grafik Omzet" %}
         </h3>
 
         <canvas id="omzetChart"></canvas>
@@ -145,7 +154,7 @@ new Chart(ctx, {
     <div class="card-body">
 
         <h3 class="text-dark">
-            ⚠ Produk Hampir Habis
+            ⚠ {% trans "Produk Hampir Habis" %}
         </h3>
 
         <ul class="list-group">
@@ -163,7 +172,7 @@ new Chart(ctx, {
 
             <li class="list-group-item">
 
-                ✅ Semua stok aman
+            ✅ {% trans "Semua stok aman" %}
 
             </li>
 
@@ -178,19 +187,27 @@ new Chart(ctx, {
     <div class="mt-4">
 
     <a href="/produk/" class="btn btn-primary btn-lg">
-        📦 Produk
+        📦 {% trans "Produk" %}
     </a>
 
     <a href="/jual/" class="btn btn-success btn-lg">
-        💰 Jual
+        💰 {% trans "Jual" %}
     </a>
 
     <a href="/transaksi/" class="btn btn-secondary btn-lg">
-        📋 Transaksi
+        📋 {% trans "Transaksi" %}
     </a>
 
     <a href="/laporan/" class="btn btn-warning btn-lg">
-        📑 Laporan
+        📑 {% trans "Laporan" %}
+    </a>
+
+    <a
+    href="{% url 'reset_stok' %}"
+    class="btn btn-danger">
+
+    Reset Semua Stok
+
     </a>
 
 </div>

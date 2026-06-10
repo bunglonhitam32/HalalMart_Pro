@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-09 20:04+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\kasir\templates\kasir\base.html:117
+msgid "HalalMart Pro"
+msgstr "HalalMart Pro"
+
+#: .\kasir\templates\kasir\base.html:131
+msgid "Menu Utama"
+msgstr "Home"
+
+#: .\kasir\templates\kasir\base.html:135
+msgid "Pemesanan"
+msgstr "Orders"
+
+#: .\kasir\templates\kasir\base.html:139 .\kasir\templates\kasir\produk.html:9
+msgid "Produk Kami"
+msgstr "Our Products"
+
+#: .\kasir\templates\kasir\base.html:143
+#: .\kasir\templates\kasir\transaksi.html:8
+msgid "Riwayat Transaksi"
+msgstr "Transaction History"
+
+#: .\kasir\templates\kasir\base.html:151
+msgid "Tema Gelap/Terang"
+msgstr "Dark/Light Mode"
+
+#: .\kasir\templates\kasir\base.html:228
+msgid "Selamat Datang"
+msgstr "Welcome"
+
+#: .\kasir\templates\kasir\dashboard.html:34
+msgid "Jumlah Produk"
+msgstr "Number of Products"
+
+#: .\kasir\templates\kasir\dashboard.html:48
+msgid "Total Stok"
+msgstr "Total Stock"
+
+#: .\kasir\templates\kasir\dashboard.html:62
+msgid "Nilai Inventaris"
+msgstr "Inventory Value"
+
+#: .\kasir\templates\kasir\dashboard.html:76
+#: .\kasir\templates\kasir\laporan.html:14
+#, fuzzy
+#| msgid "Riwayat Transaksi"
+msgid "Jumlah Transaksi"
+msgstr "Transaction Quantity"
+
+#: .\kasir\templates\kasir\dashboard.html:90
+#: .\kasir\templates\kasir\laporan.html:24
+msgid "Total Omzet"
+msgstr "Total Turnover"
+
+#: .\kasir\templates\kasir\dashboard.html:104
+msgid "Kurs USD ke IDR"
+msgstr "USD to IDR exchange rate"
+
+#: .\kasir\templates\kasir\dashboard.html:123
+msgid "Grafik Omzet"
+msgstr "Turnover Graphics"
+
+#: .\kasir\templates\kasir\dashboard.html:157
+#, fuzzy
+#| msgid "Produk Kami"
+msgid "Produk Hampir Habis"
+msgstr "Almost out of stock"
+
+#: .\kasir\templates\kasir\dashboard.html:175
+msgid "Semua stok aman"
+msgstr "all stocks are safe"
+
+#: .\kasir\templates\kasir\dashboard.html:190
+#: .\kasir\templates\kasir\transaksi.html:14
+#, fuzzy
+#| msgid "Produk Kami"
+msgid "Produk"
+msgstr "Our Products"
+
+#: .\kasir\templates\kasir\dashboard.html:194
+msgid "Jual"
+msgstr "Sell"
+
+#: .\kasir\templates\kasir\dashboard.html:198
+#, fuzzy
+#| msgid "Riwayat Transaksi"
+msgid "Transaksi"
+msgstr "Transaction"
+
+#: .\kasir\templates\kasir\dashboard.html:202
+msgid "Laporan"
+msgstr "Report"
+
+#: .\kasir\templates\kasir\jual.html:7
+#, fuzzy
+#| msgid "Pemesanan"
+msgid "Buat Pemesanan"
+msgstr "Create Orders"
+
+#: .\kasir\templates\kasir\jual.html:13
+#, fuzzy
+#| msgid "Selamat Datang"
+msgid "Selamat Datang di HalalMart Pro"
+msgstr "Welcome to HalalMart Pro"
+
+#: .\kasir\templates\kasir\jual.html:17
+msgid "Pilih produk halal yang ingin Anda pesan."
+msgstr "Choose Halal Product you want to order"
+
+#: .\kasir\templates\kasir\jual.html:32
+#, fuzzy
+#| msgid "Pemesanan"
+msgid "Buat Pesanan"
+msgstr "CreateOrders"
+
+#: .\kasir\templates\kasir\laporan.html:8
+msgid "Laporan Keuangan"
+msgstr "Financial Statements"
+
+#: .\kasir\templates\kasir\laporan.html:19
+msgid "Total Produk Terjual"
+msgstr "Total Products Sold"
+
+#: .\kasir\templates\kasir\laporan.html:34
+#: .\kasir\templates\kasir\transaksi.html:44
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: .\kasir\templates\kasir\produk.html:15
+#: .\kasir\templates\kasir\tambah_produk.html:9
+msgid "Tambah Produk"
+msgstr "Add Product"
+
+#: .\kasir\templates\kasir\produk.html:25
+msgid "Cari produk..."
+msgstr "Search Product..."
+
+#: .\kasir\templates\kasir\produk.html:60
+#, fuzzy
+#| msgid "Pemesanan"
+msgid "Pesan"
+msgstr "Orders"
+
+#: .\kasir\templates\kasir\produk.html:76
+msgid "Produk tidak ditemukan."
+msgstr "Product not found"
+
+#: .\kasir\templates\kasir\tambah_produk.html:26
+msgid "Simpan Produk"
+msgstr "Save Product"
+
+#: .\kasir\templates\kasir\transaksi.html:15
+msgid "Jumlah"
+msgstr "Quantity"
+
+#: .\kasir\templates\kasir\transaksi.html:16
+msgid "Total Harga"
+msgstr "Total Price"
+
+#: .\kasir\templates\kasir\transaksi.html:17
+msgid "Tanggal"
+msgstr "Date"
+
+#~ msgid "Bahasa"
+#~ msgstr "Language"

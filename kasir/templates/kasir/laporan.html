@@ -1,26 +1,27 @@
 {% extends 'kasir/base.html' %}
+{% load i18n %}
 
 {% block content %}
 
 <div class="container mt-5">
 
-    <h1>📑 Laporan Keuangan</h1>
+    <h1>📑 {% trans "Laporan Keuangan" %}</h1>
 
     <div class="card mt-4">
         <div class="card-body">
 
             <h4>
-                Jumlah Transaksi:
-                {{ jumlah_transaksi }}
+                {% trans "Jumlah Transaksi" %}:
+                {{jumlah_transaksi }}
             </h4>
 
             <h4>
-                Total Produk Terjual:
+                {% trans "Total Produk Terjual" %}:
                 {{ total_produk_terjual }}
             </h4>
 
             <h4>
-                Total Omzet:
+                {% trans "Total Omzet" %}:
                 Rp {{ total_omzet }}
             </h4>
 
@@ -30,7 +31,7 @@
     <br>
 
     <a href="/" class="btn btn-primary">
-        Dashboard
+        {% trans "Dashboard" %}
     </a>
 
 </div>
